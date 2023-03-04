@@ -71,7 +71,7 @@
 ## :star2: About the Project
 
 <div align="center">
-  <img src="readme_assets/3d-portfolio.png" height="auto" width="80%"/>
+  <img src="readme_assets/3d-portfolio.png" height="auto" width="90%"/>
 </div>
 
 <br />
