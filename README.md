@@ -118,7 +118,7 @@ Threejs_3D_Portfolio/
 Download or clone this repo by using the link below:
 
 ```bash
- https://github.com/ladunjexa/Threejs_3D_Portfolio
+ https://github.com/ladunjexa/Threejs_3D_Portfolio.git
 ```
 
 #### Step 2:
