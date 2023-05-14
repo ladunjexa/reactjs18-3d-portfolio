@@ -25,7 +25,6 @@ const Navbar = () => {
 
     const navbarHighlighter = () => {
       const sections = document.querySelectorAll("section[id]");
-      console.log(sections);
 
       sections.forEach((current) => {
         const sectionId = current.getAttribute("id");
