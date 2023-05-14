@@ -17,12 +17,33 @@ const Navbar = () => {
         setScrolled(true);
       } else {
         setScrolled(false);
+        setActive("");
       }
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    const navbarHighlighter = () => {
+      const sections = document.querySelectorAll("section[id]");
+
+      sections.forEach((current) => {
+        const sectionId = current.getAttribute("id");
+        const sectionHeight = current.offsetHeight;
+        const sectionTop =
+          current.getBoundingClientRect().top - sectionHeight * 0.2;
+
+        if (sectionTop < 0 && sectionTop + sectionHeight > 0) {
+          setActive(sectionId);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", navbarHighlighter);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", navbarHighlighter);
+    };
   }, []);
 
   return (
@@ -38,7 +59,6 @@ const Navbar = () => {
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
             window.scrollTo(0, 0);
           }}
         >
@@ -54,9 +74,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
+                active === nav.id ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
@@ -81,11 +100,10 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === nav.id ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
