@@ -166,6 +166,22 @@ At the main folder execute the following command in console to get the required 
 
 #### Step 2:
 
+At the main folder execute the following command in console to get the required dependencies:
+(Clear the npm cache: Run the following command to clear the npm cache:)
+
+```bash
+  npm cache clean --force
+```
+
+#### Step 3:
+
+At the main folder execute the following command in console to get the required dependencies:
+
+```bash
+  npm install vite --save-dev --legacy-peer-deps
+```
+#### Step 4:
+
 At the main folder execute the following command in console to run the development server:
 
 ```bash
