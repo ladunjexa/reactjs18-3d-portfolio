@@ -26,18 +26,19 @@ const Contact = () => {
     setLoading(true);
 
     emailjs
-      .send(
-        "service_r0jcplm",
-        "template_1t76uxq",
-        {
-          form_name: form.name,
-          to_name: "Abdirizak",
-          from_email: form.email,
-          to_email: "abdurazak.awil1@gmail.com@mail.com",
-          message: form.message,
-        },
-        "Jqq9AvwIuSjoMiA5c"
-      )
+     emailjs.send(
+  "service_vpszwtu",
+  "template_n630mvn",
+  {
+    from_name: form.name,
+    to_name: "Abdirizak",
+    from_email: form.email,
+    to_email: "abdurazak.awil1@gmail.com",
+    message: form.message,
+  },
+  "nb7POvqWoRlFVfSBn"
+)
+
       .then(
         () => {
           setLoading(false);
@@ -52,7 +53,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
 
-          console.log(error);
+          alert(JSON.stringify(error))
           alert("Something went wrong.");
         }
       );
