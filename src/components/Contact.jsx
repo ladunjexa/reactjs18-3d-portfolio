@@ -42,7 +42,10 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+         
+          alert(`Hello ${form.name}! Thank you for reaching out. I'm thrilled to hear from you. I will get back to you with a smile as soon as possible. Have a fantastic day! 😊`);
+
+
 
           setForm({
             name: "",
@@ -53,7 +56,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
 
-          alert(JSON.stringify(error))
+          console.log(error)
           alert("Something went wrong.");
         }
       );
