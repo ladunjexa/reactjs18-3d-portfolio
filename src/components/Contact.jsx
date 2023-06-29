@@ -26,22 +26,26 @@ const Contact = () => {
     setLoading(true);
 
     emailjs
-      .send(
-        "service_r0jcplm",
-        "template_1t76uxq",
-        {
-          form_name: form.name,
-          to_name: "Abdirizak",
-          from_email: form.email,
-          to_email: "abdurazak.awil1@gmail.com@mail.com",
-          message: form.message,
-        },
-        "Jqq9AvwIuSjoMiA5c"
-      )
+     emailjs.send(
+  "service_vpszwtu",
+  "template_n630mvn",
+  {
+    from_name: form.name,
+    to_name: "Abdirizak",
+    from_email: form.email,
+    to_email: "abdurazak.awil1@gmail.com",
+    message: form.message,
+  },
+  "nb7POvqWoRlFVfSBn"
+)
+
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+         
+          alert(`Hello ${form.name}! Thank you for reaching out. I'm thrilled to hear from you. I will get back to you with a smile as soon as possible. Have a fantastic day! 😊`);
+
+
 
           setForm({
             name: "",
@@ -52,7 +56,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
 
-          console.log(error);
+          console.log(error)
           alert("Something went wrong.");
         }
       );
