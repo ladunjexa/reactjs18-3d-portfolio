@@ -134,7 +134,7 @@ Download or clone this repo by using the link below:
 At the main folder execute the following command in console to get the required dependencies:
 
 ```bash
-  npm install
+  npm install --legacy-peer-deps
 ```
 
 #### Step 4:
@@ -161,7 +161,7 @@ At the main folder execute the following command in console to run the server:
 At the main folder execute the following command in console to get the required dependencies:
 
 ```bash
-  npm install
+  npm install --legacy-peer-deps
 ```
 
 #### Step 2:
