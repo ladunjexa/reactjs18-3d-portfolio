@@ -42,19 +42,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "React Js",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Three Js",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Node Js",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Python",
     icon: creator,
   },
 ];
@@ -116,57 +116,63 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "React.js Developer and Python (Django)",
+    company_name: "UptechSys Pvt. Ltd.",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Dec 2020 - Dec 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Created a web platform that connects land and buildings to the potential user using React.js and other related technologies.",
+      "Managed inventory of a warehouse (ERP), including eCommerce store, hardware, pharmacy, etc. by building a custom dashboard using Material UI, React js and typescript.",
+      "Implemented a barcode scanning system for tracking inventory.",
+      "Worked on a complete school management system and e-Learning platform with integration of open source meet channels for online classes.",
+      "Implemented SMS gateway for notifications and developed web app for students, parents and teachers.",
+      "Created CRUD operations API on django (Python)",
+      "Implemented Zoom web SDK and custom SDK provided by JITSI api."
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Software Developer (ReactJs, NodeJs and Python)",
+    company_name: "Portpro-Asia",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Nov 2021 - July 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Worked on a tracking system that tracks containers life cycle received from ports to delivery and returns, whose base is built on bootstrap and react with tracking based on scraping sites.",
+      "Worked on creating backend Restful APIs using NodeJs",
+      "Implemented Web scraping to extract data with Python and Nodejs using serverless architechture. (Lambda -AWS).",
+      "Created a EC2 instance (Microservice Architecture) to perform OCR on images to read and identify text using Python - (openCV and tensorflow).",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "FrontEnd Engineer (ReactJs, ThreeJs, Cesium and Python)",
+    company_name: "Angelswing Inc.- Korea",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Aug 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Worked in a creation of a web-site about reality capture and survey that creates an exact digital copy of the construction site using data from the drones.",
+      "Assisted in creating a virtual twin of the real thing enhancing project visualization, monitoring, and decision-making processes.",
+      "Implemented the project that was based on cesium, three.js and a potree engine to visualize mesh and point clouds.",
+      "Created a pipeline to process the conversion of IFC / BIM Model (Industry Foundation Classes / Building Information Model) to tiled model for better visualization",
+      "Implemented measuring tools in potree and threeJs, added 3D simulation on IFC models using Threejs and Potree",
     ],
   },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "Full stack Developer",
+  //   company_name: "Meta",
+  //   icon: meta,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "A Reality capture and survey that creates an exact digital copy of the construction site using data from the drones.",
+  //     "Making a virtual twin of the real thing enhancing project visualization, monitoring, and decision-making processes.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
