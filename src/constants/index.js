@@ -24,6 +24,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  dnata,
+  fronthausEventApp,
+  resico
 } from "../assets";
 
 export const navLinks = [
@@ -161,66 +164,66 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "News Aggregator",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "The Automated News Collector and Management Web App, aims to streamline the process of identifying and managing relevant news articles for dnata employees. The web application automates the retrieval of industry-specific articles from diverse sources, categorizing, summarizing, and facilitates seamless collaboration within the team.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "GCP",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Ruby On Rails",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: dnata,
+    source_code_link: "https://github.com/Service-Design-Studio/1d-final-project-2023-sds-2023-team-06",
   },
   {
-    name: "Job IT",
+    name: "Event Application",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Designed architecture of the mobile app for event attendees so that the app can be easily customized for different events.",
     tags: [
       {
-        name: "react",
+        name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "RESTapi",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Architecture ",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: fronthausEventApp,
+    source_code_link: "https://github.com/jsonggan/fronthaus",
   },
   {
-    name: "Trip Guide",
+    name: "ResiCo",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Connecting communities together by digitalizing residential notice boards and providing an easier way for residents to talk, ask, and help each other.",
     tags: [
       {
-        name: "nextjs",
+        name: "Java",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Andriod",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Firebase",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: resico,
     source_code_link: "https://github.com/",
   },
 ];
