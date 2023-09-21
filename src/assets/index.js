@@ -34,6 +34,8 @@ import dnata from "./dnata.png";
 import fronthausEventApp from "./fronthausEventApp.png";
 import resico from "./resico.png";
 
+import yingxiang from './yingxiang.jpg';
+
 export {
   logo,
   backend,
@@ -67,4 +69,5 @@ export {
   dnata,
   fronthausEventApp,
   resico,
+  yingxiang,
 };
