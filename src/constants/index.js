@@ -224,7 +224,7 @@ const projects = [
       },
     ],
     image: resico,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/jsonggan/ResiCo",
   },
 ];
 
