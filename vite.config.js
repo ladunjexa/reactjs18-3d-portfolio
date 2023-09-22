@@ -15,5 +15,6 @@ export default defineConfig({
         }
       }
     }
-  }
+  },
+  base: '/Threejs-3D-Portfolio/'
 })
