@@ -27,9 +27,6 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import helloholo from "./company/helloholo.jpg"
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 import dnata from "./dnata.png";
 import fronthausEventApp from "./fronthausEventApp.png";
 import resico from "./resico.png";
@@ -62,9 +59,6 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
   helloholo,
   dnata,
   fronthausEventApp,
