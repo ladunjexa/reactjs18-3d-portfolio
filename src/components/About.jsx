@@ -47,10 +47,9 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
+        I am a user-centric developer with 1.8 years of combined internship experience in software engineering. I've contributed to projects for over 6 clients, including Google, DBS, OCBC and Singpass, developing software that has reached over 20,000 users.<br></br><br></br>
+
+        I'm currently a full scholarship holder pursuing Degree of Computer Science and Design in SUTD. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 

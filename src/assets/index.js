@@ -25,10 +25,17 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import helloholo from "./company/helloholo.jpg"
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import dnata from "./dnata.png";
+import fronthausEventApp from "./fronthausEventApp.png";
+import resico from "./resico.png";
+import singpass from "./singpass.png";
+import dbs from "./dbs.jpg";
+import ocbc from "./ocbc.jpg";
+
+import yingxiang from './yingxiang.jpg';
+import shelen from './shelen.jpeg';
 
 export {
   logo,
@@ -56,7 +63,13 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
+  helloholo,
+  dnata,
+  singpass,
+  dbs,
+  fronthausEventApp,
+  resico,
+  yingxiang,
+  shelen,
+  ocbc,
 };
