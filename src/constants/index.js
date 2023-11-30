@@ -18,9 +18,13 @@ import {
   helloholo,
   threejs,
   dnata,
+  singpass,
+  dbs,
+  ocbc,
   fronthausEventApp,
   resico,
   yingxiang,
+  shelen,
 } from "../assets";
 
 export const navLinks = [
@@ -32,7 +36,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Developer",
+    title: "Mobile Developer",
     icon: mobile,
   },
   {
@@ -40,7 +44,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Cloud Computing",
     icon: creator,
   },
 ];
@@ -108,11 +112,12 @@ const experiences = [
     iconBg: "#383E56",
     date: "May 2022 - Present",
     points: [
+      "Programmed Android and iOS application using Flutter for Google and ENMSG, providing attendees with easy access to event details and schedules.",
+      "Developed a web application using PHP/Laravel and Azure, MySQL as databases, for DBS, OCBC, and Singpass, which allows speakers to engage with their audience.",
+      "Programmed Mobile Application using Java and NVIDIA CloudXR to showcase XR capabilities on smartphones and attract over 300 audience in an event.",
       "Designed architecture of the mobile app for event attendees so that the app can be easily customized for different events.",
-      "Programmed Android and iOS application using Flutter for YouTube Creator Submit, providing attendees with easy access to event details and schedules.",
-      "Programmed Web Application using PHP for speaker to engage with audience.",
-      "Developing and maintaining web applications using React.js, tailwind css and other related technologies.",
-      "Programmed AR app for HoloLens using Unity to train workers to be familiar with factory workflow."
+      "Refactored a web application using React and Next.js, resulting in a 20% reduction in code while implementing appropriate design patterns and ensuring a robust system.",
+
     ],
   }
 ];
@@ -126,11 +131,83 @@ const testimonials = [
     company: "HelloHolo",
     image: yingxiang,
   },
+  {
+    testimonial:
+      "I’ve witnessed his strong command of Java, consistently delivering high-quality solutions. He wasn’t just about writing code, he actively engaged with the team, effective communication, and readily lent support to others.",
+    name: "Shelen Go",
+    designation: "Software Developer",
+    company: "SUTD",
+    image: shelen,
+  },
 ];
 
 const projects = [
+  
   {
-    name: "News Aggregator",
+    name: "Spot the Differences (Web)",
+    description:
+      "The Spot the Differences game for Singpass aims to educate seniors in preventing scam applications.",
+    tags: [
+      {
+        name: "Laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Azure",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Design",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: singpass,
+    source_code_link: "https://avpd.holo.sg/game/dashboard",
+  },
+  {
+    name: "DBS CX Day (Web)",
+    description:
+      "A series of games that engage 10,000+ users and allow them to learn more about DBS.",
+    tags: [
+      {
+        name: "Laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Azure",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Pusher",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dbs,
+    source_code_link: "https://github.com/jsonggan",
+  },
+  {
+    name: "Frank by OCBC (Web)",
+    description:
+      "A real-time updating web app that receives user card designs and displays them with elegant animations.",
+    tags: [
+      {
+        name: "Laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Azure",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Pusher",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: ocbc,
+    source_code_link: "https://frank.holo.sg/card",
+  },
+  {
+    name: "News Aggregator (Web)",
     description:
       "The Automated News Collector and Management Web App, aims to streamline the process of identifying and managing relevant news articles for dnata employees. The web application automates the retrieval of industry-specific articles from diverse sources, categorizing, summarizing, and facilitates seamless collaboration within the team.",
     tags: [
@@ -151,7 +228,7 @@ const projects = [
     source_code_link: "https://github.com/Service-Design-Studio/1d-final-project-2023-sds-2023-team-06",
   },
   {
-    name: "Event Application",
+    name: "Event Application (Mobile)",
     description:
       "Designed architecture of the mobile app for event attendees so that the app can be easily customized for different events.",
     tags: [
@@ -172,7 +249,7 @@ const projects = [
     source_code_link: "https://github.com/jsonggan/fronthaus",
   },
   {
-    name: "ResiCo",
+    name: "ResiCo (Java)",
     description:
       "Connecting communities together by digitalizing residential notice boards and providing an easier way for residents to talk, ask, and help each other.",
     tags: [

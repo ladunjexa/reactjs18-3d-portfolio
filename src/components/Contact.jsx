@@ -113,6 +113,11 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">songganjs@gmail.com</span>
           </label>
 
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">My LinkedIn:</span>
+            <a className="text-blue-700 font-medium mb-4" href="https://www.linkedin.com/in/chin-song/" target="_blank">https://www.linkedin.com/in/chin-song/</a>
+          </label>
+
           {/* <button
             type="submit"
             className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"

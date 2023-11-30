@@ -30,8 +30,12 @@ import helloholo from "./company/helloholo.jpg"
 import dnata from "./dnata.png";
 import fronthausEventApp from "./fronthausEventApp.png";
 import resico from "./resico.png";
+import singpass from "./singpass.png";
+import dbs from "./dbs.jpg";
+import ocbc from "./ocbc.jpg";
 
 import yingxiang from './yingxiang.jpg';
+import shelen from './shelen.jpeg';
 
 export {
   logo,
@@ -61,7 +65,11 @@ export {
   tesla,
   helloholo,
   dnata,
+  singpass,
+  dbs,
   fronthausEventApp,
   resico,
   yingxiang,
+  shelen,
+  ocbc,
 };
