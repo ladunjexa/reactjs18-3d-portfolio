@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { styles } from "../../styles";
+import { fadeIn, textVariant } from "../../utils/motion";
+import { testimonials } from "../../constants";
+import { config } from "../../config";
+import { Header } from "../atoms/header";
 
 const FeedbackCard = ({
   index,
@@ -48,12 +49,11 @@ const Feedbacks = () => {
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
       >
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
-        </motion.div>
+        <Header useMotion={true} section={"feedbacks"} />
       </div>
-      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
+      <div
+        className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 max-sm:justify-center`}
+      >
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
