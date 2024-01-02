@@ -3,22 +3,18 @@ import { motion } from "framer-motion";
 
 import { styles } from "../../styles";
 import { textVariant } from "../../utils/motion";
-import { config } from "../../config";
 
 interface IHeader {
   useMotion: boolean;
-  section: string;
+  p: string;
+  h2: string;
 }
 
-export const Header: React.FC<IHeader> = ({ useMotion, section }) => {
-  const sectionKey = section as keyof typeof config.sections;
-
+export const Header: React.FC<IHeader> = ({ useMotion, p, h2 }) => {
   const Content = () => (
     <>
-      <p className={styles.sectionSubText}>{config.sections[sectionKey].p}</p>
-      <h2 className={styles.sectionHeadText}>
-        {config.sections[sectionKey].h2}
-      </h2>
+      <p className={styles.sectionSubText}>{p}</p>
+      <h2 className={styles.sectionHeadText}>{h2}</h2>
     </>
   );
 

@@ -1,3 +1,12 @@
+import type {
+  TNavLink,
+  TService,
+  TTechnology,
+  TExperience,
+  TTestimonial,
+  TProject,
+} from "../types";
+
 import {
   mobile,
   backend,
@@ -25,7 +34,7 @@ import {
   threejs,
 } from "../assets";
 
-export const navLinks = [
+export const navLinks: TNavLink[] = [
   {
     id: "about",
     title: "About",
@@ -40,7 +49,7 @@ export const navLinks = [
   },
 ];
 
-const services = [
+const services: TService[] = [
   {
     title: "Web Developer",
     icon: web,
@@ -59,7 +68,7 @@ const services = [
   },
 ];
 
-const technologies = [
+const technologies: TTechnology[] = [
   {
     name: "HTML 5",
     icon: html,
@@ -114,10 +123,10 @@ const technologies = [
   },
 ];
 
-const experiences = [
+const experiences: TExperience[] = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
+    companyName: "Starbucks",
     icon: starbucks,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
@@ -130,7 +139,7 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
+    companyName: "Tesla",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
@@ -143,7 +152,7 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
+    companyName: "Shopify",
     icon: shopify,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
@@ -156,7 +165,7 @@ const experiences = [
   },
   {
     title: "Full stack Developer",
-    company_name: "Meta",
+    companyName: "Meta",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
@@ -169,7 +178,7 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+const testimonials: TTestimonial[] = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
@@ -196,7 +205,7 @@ const testimonials = [
   },
 ];
 
-const projects = [
+const projects: TProject[] = [
   {
     name: "Car Rent",
     description:
@@ -216,7 +225,7 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    sourceCodeLink: "https://github.com/",
   },
   {
     name: "Job IT",
@@ -237,7 +246,7 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    sourceCodeLink: "https://github.com/",
   },
   {
     name: "Trip Guide",
@@ -258,7 +267,7 @@ const projects = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    sourceCodeLink: "https://github.com/",
   },
 ];
 

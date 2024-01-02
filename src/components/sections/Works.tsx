@@ -7,14 +7,15 @@ import { projects } from "../../constants";
 import { fadeIn } from "../../utils/motion";
 import { config } from "../../config";
 import { Header } from "../atoms/header";
+import { TProject } from "../../types";
 
-const ProjectCard = ({
+const ProjectCard: React.FC<{ index: number } & TProject> = ({
   index,
   name,
   description,
   tags,
   image,
-  source_code_link,
+  sourceCodeLink,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -34,7 +35,7 @@ const ProjectCard = ({
             />
             <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
               <div
-                onClick={() => window.open(source_code_link, "_blank")}
+                onClick={() => window.open(sourceCodeLink, "_blank")}
                 className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
               >
                 <img
@@ -65,7 +66,7 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <Header useMotion={true} section={"works"} />
+      <Header useMotion={true} {...config.sections.works} />
 
       <div className="w-full flex">
         <motion.p

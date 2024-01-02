@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../../styles";
-import { fadeIn, textVariant } from "../../utils/motion";
+import { fadeIn } from "../../utils/motion";
 import { testimonials } from "../../constants";
-import { config } from "../../config";
 import { Header } from "../atoms/header";
+import { TTestimonial } from "../../types";
+import { config } from "../../config";
 
-const FeedbackCard = ({
+const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
   index,
   testimonial,
   name,
@@ -49,7 +50,7 @@ const Feedbacks = () => {
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
       >
-        <Header useMotion={true} section={"feedbacks"} />
+        <Header useMotion={true} {...config.sections.feedbacks} />
       </div>
       <div
         className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 max-sm:justify-center`}

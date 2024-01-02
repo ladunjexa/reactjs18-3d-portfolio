@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -9,7 +9,7 @@ import { config } from "../../config";
 import { Header } from "../atoms/header";
 
 const INITIAL_STATE = Object.fromEntries(
-  Object.keys(config.sections.contact.form).map((input) => [input, ""])
+  Object.keys(config.contact.form).map((input) => [input, ""])
 );
 
 const emailjsConfig = {
@@ -19,16 +19,20 @@ const emailjsConfig = {
 };
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
+  ) => {
+    if (e === undefined) return;
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
+    if (e === undefined) return;
     e.preventDefault();
     setLoading(true);
 
@@ -69,15 +73,17 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <Header useMotion={false} section={"contact"} />
+        <Header useMotion={false} {...config.contact} />
 
         <form
+          // @ts-ignore
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
-          {Object.keys(config.sections.contact.form).map((input) => {
-            const { span, placeholder } = config.sections.contact.form[input];
+          {Object.keys(config.contact.form).map((input) => {
+            const { span, placeholder } =
+              config.contact.form[input as keyof typeof config.contact.form];
             const Component = input === "message" ? "textarea" : "input";
 
             return (

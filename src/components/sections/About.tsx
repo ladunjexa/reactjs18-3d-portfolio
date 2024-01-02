@@ -8,7 +8,13 @@ import { fadeIn } from "../../utils/motion";
 import { config } from "../../config";
 import { Header } from "../atoms/header";
 
-const ServiceCard = ({ index, title, icon }) => (
+interface IServiceCard {
+  index: number;
+  title: string;
+  icon: string;
+}
+
+const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
   <Tilt
     glareEnable
     tiltEnable
@@ -21,14 +27,7 @@ const ServiceCard = ({ index, title, icon }) => (
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
-        <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
+        <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
           <img
             src={icon}
             alt="web-development"
@@ -47,7 +46,7 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-      <Header useMotion={true} section={"about"} />
+      <Header useMotion={true} {...config.sections.about} />
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}

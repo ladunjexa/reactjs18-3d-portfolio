@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../../styles";
@@ -7,7 +7,7 @@ import { logo, menu, close } from "../../assets";
 import { config } from "../../config";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState<string | null>();
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,6 +29,7 @@ const Navbar = () => {
 
       sections.forEach((current) => {
         const sectionId = current.getAttribute("id");
+        // @ts-ignore
         const sectionHeight = current.offsetHeight;
         const sectionTop =
           current.getBoundingClientRect().top - sectionHeight * 0.2;

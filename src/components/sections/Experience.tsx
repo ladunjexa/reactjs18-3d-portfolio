@@ -9,8 +9,10 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { Header } from "../atoms/header";
+import { TExperience } from "../../types";
+import { config } from "../../config";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard: React.FC<TExperience> = (experience) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -24,7 +26,7 @@ const ExperienceCard = ({ experience }) => {
         <div className="flex justify-center items-center w-full h-full">
           <img
             src={experience.icon}
-            alt={experience.company_name}
+            alt={experience.companyName}
             className="w-[60%] h-[60%] object-contain"
           />
         </div>
@@ -36,7 +38,7 @@ const ExperienceCard = ({ experience }) => {
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {experience.company_name}
+          {experience.companyName}
         </p>
       </div>
 
@@ -57,12 +59,12 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <Header useMotion={true} section={"experience"} />
+      <Header useMotion={true} {...config.sections.experience} />
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <ExperienceCard key={index} {...experience} />
           ))}
         </VerticalTimeline>
       </div>
