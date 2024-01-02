@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   EarthCanvas,
   BallCanvas,

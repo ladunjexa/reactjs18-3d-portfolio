@@ -9,7 +9,7 @@ import { config } from "../../config";
 import { Header } from "../atoms/header";
 
 const INITIAL_STATE = Object.fromEntries(
-  Object.keys(config.contact.form).map((input) => [input, ""])
+  Object.keys(config.sections.contact.form).map((input) => [input, ""])
 );
 
 const emailjsConfig = {
@@ -76,8 +76,8 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
-          {Object.keys(config.contact.form).map((input) => {
-            const { span, placeholder } = config.contact.form[input];
+          {Object.keys(config.sections.contact.form).map((input) => {
+            const { span, placeholder } = config.sections.contact.form[input];
             const Component = input === "message" ? "textarea" : "input";
 
             return (
