@@ -13,9 +13,9 @@ const INITIAL_STATE = Object.fromEntries(
 );
 
 const emailjsConfig = {
-  serviceId: "service_r0jcplm",
-  templateId: "template_1t76uxq",
-  accessToken: "Jqq9AvwIuSjoMiA5c",
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
 };
 
 const Contact = () => {
