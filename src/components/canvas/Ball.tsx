@@ -30,7 +30,7 @@ const Ball = (props: any) => {
           rotation={[2 * Math.PI, 0, 6.25]}
           scale={1}
           map={decal}
-          // @ts-ignore
+          // @ts-expect-error
           flatShading
         />
       </mesh>

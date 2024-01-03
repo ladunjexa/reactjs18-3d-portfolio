@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { services } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { fadeIn } from "../../utils/motion";
-import { config } from "../../config";
-import { Header } from "../atoms/header";
+import { config } from "../../constants/config";
+import { Header } from "../atoms/Header";
 
 interface IServiceCard {
   index: number;
@@ -25,16 +25,16 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
     <div className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        className="green-pink-gradient shadow-card w-full rounded-[20px] p-[1px]"
       >
-        <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        <div className="bg-tertiary flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5">
           <img
             src={icon}
             alt="web-development"
-            className="w-16 h-16 object-contain"
+            className="h-16 w-16 object-contain"
           />
 
-          <h3 className="text-white text-[20px] font-bold text-center">
+          <h3 className="text-center text-[20px] font-bold text-white">
             {title}
           </h3>
         </div>
@@ -50,7 +50,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
       >
         {config.sections.about.content}
       </motion.p>

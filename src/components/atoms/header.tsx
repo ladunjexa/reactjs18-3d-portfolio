@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { styles } from "../../styles";
+import { styles } from "../../constants/styles";
 import { textVariant } from "../../utils/motion";
 
 interface IHeader {

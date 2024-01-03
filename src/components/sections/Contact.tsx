@@ -5,8 +5,8 @@ import emailjs from "@emailjs/browser";
 import { EarthCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
-import { config } from "../../config";
-import { Header } from "../atoms/header";
+import { config } from "../../constants/config";
+import { Header } from "../atoms/Header";
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
@@ -67,16 +67,16 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="bg-black-100 flex-[0.75] rounded-2xl p-8"
       >
         <Header useMotion={false} {...config.contact} />
 
         <form
-          // @ts-ignore
+          // @ts-expect-error
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
@@ -88,14 +88,14 @@ const Contact = () => {
 
             return (
               <label key={input} className="flex flex-col">
-                <span className="text-white font-medium mb-4">{span}</span>
+                <span className="mb-4 font-medium text-white">{span}</span>
                 <Component
                   type={input === "email" ? "email" : "text"}
                   name={input}
                   value={form[`${input}`]}
                   onChange={handleChange}
                   placeholder={placeholder}
-                  className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                  className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
                   {...(input === "message" && { rows: 7 })}
                 />
               </label>
@@ -103,7 +103,7 @@ const Contact = () => {
           })}
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none"
           >
             {loading ? "Sending..." : "Send"}
           </button>
@@ -112,7 +112,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
       >
         <EarthCanvas />
       </motion.div>

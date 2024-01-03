@@ -5,7 +5,6 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:tailwindcss/recommended",
     "eslint-config-prettier",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
@@ -32,5 +31,7 @@ module.exports = {
   },
   rules: {
     // Add your own rules here to override ones from the extended configs.
+    "@typescript-eslint/ban-ts-comment": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
   },
 };
