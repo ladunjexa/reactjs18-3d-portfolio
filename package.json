@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
-    "@react-three/drei": "^9.56.24",
+    "@react-three/drei": "^9.97.6",
     "@react-three/fiber": "^8.11.1",
     "framer-motion": "^9.0.7",
     "maath": "^0.5.2",
