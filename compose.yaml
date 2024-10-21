@@ -1,0 +1,42 @@
+version: '3.9'  # Specify the version of Docker Compose
+
+services:
+  server:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+      # Include additional environment variables here as needed
+    ports:
+      - 3300:3300
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail http://localhost:3300/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  db:
+    image: postgres
+    restart: always
+    user: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: example
+      POSTGRES_PASSWORD_FILE: /run/secrets/db-password
+    expose:
+      - 5432
+    healthcheck:
+      test: ["CMD", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    secrets:
+      - db-password
+
+volumes:
+  db-data:
+
+secrets:
+  db-password:
+    file: db/password.txt

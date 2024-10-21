@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 
 import {
   About,
@@ -10,17 +10,9 @@ import {
   Tech,
   Works,
   StarsCanvas,
-} from "./components";
-import { useEffect } from "react";
-import { config } from "./constants/config";
+} from './components';
 
 const App = () => {
-  useEffect(() => {
-    if (document.title !== config.html.title) {
-      document.title = config.html.title;
-    }
-  }, []);
-
   return (
     <BrowserRouter>
       <div className="bg-primary relative z-0">

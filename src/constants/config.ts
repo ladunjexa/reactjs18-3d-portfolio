@@ -65,8 +65,8 @@ export const config: TConfig = {
   },
   sections: {
     about: {
-      p: "Introduction",
-      h2: "Overview.",
+      p: "About me",
+      h2: "Introduction",
       content: `I'm a skilled software developer with experience in TypeScript and
       JavaScript, and expertise in frameworks like React, Node.js, and
       Three.js. I'm a quick learner and collaborate closely with clients to
