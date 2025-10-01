@@ -14,18 +14,10 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-        setActive("");
-      }
-    };
+      setScrolled(scrollTop > 100);
 
-    window.addEventListener("scroll", handleScroll);
-
-    const navbarHighlighter = () => {
       const sections = document.querySelectorAll("section[id]");
+      let activeSectionId: string | null = null;
 
       sections.forEach((current) => {
         const sectionId = current.getAttribute("id");
@@ -35,16 +27,17 @@ const Navbar = () => {
           current.getBoundingClientRect().top - sectionHeight * 0.2;
 
         if (sectionTop < 0 && sectionTop + sectionHeight > 0) {
-          setActive(sectionId);
+          activeSectionId = sectionId;
         }
       });
+
+      setActive(activeSectionId || "");
     };
 
-    window.addEventListener("scroll", navbarHighlighter);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("scroll", navbarHighlighter);
     };
   }, []);
 
