@@ -32,7 +32,6 @@ type TConfig = {
   } & TSection;
   sections: {
     about: Required<TSection>;
-    experience: TSection;
     feedbacks: TSection;
     works: Required<TSection>;
   };
@@ -40,13 +39,13 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Zana Ruzgar — Full-Stack Developer",
+    fullName: "Zana Ruzgar",
+    email: "your-email@example.com",
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: "Zana Ruzgar",
+    p: ["I build modern web applications,", "CRM platforms and digital experiences"],
   },
   contact: {
     p: "Get in touch",
@@ -67,15 +66,11 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
-    },
-    experience: {
-      p: "What I have done so far",
-      h2: "Work Experience.",
+      content: `I'm a full-stack developer who builds end-to-end web applications
+      with TypeScript, React, and Node.js. I design and ship products from
+      CRM platforms to customer-facing websites, focusing on clean
+      architecture, performance, and a polished user experience. Let's
+      work together to bring your ideas to life!`,
     },
     feedbacks: {
       p: "What others say",
