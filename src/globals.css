@@ -12,6 +12,10 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
+html,body{
+  width: 100%;
+  height: 100%;
+}
 
 .hash-span {
   margin-top: -100px;
